@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "companyName": "TechNord AS",
+    "email": "contact@technord.no",
+    "location": "Oslo",
+    "description": "Leading technology consulting company in Norway",
+    "website": "https://technord.no"
+  },
+  {
+    "id": 2,
+    "companyName": "Analytics Norway",
+    "email": "info@analyticsno.no",
+    "location": "Bergen",
+    "description": "Data analytics and machine learning solutions",
+    "website": "https://analyticsno.no"
+  },
+  {
+    "id": 3,
+    "companyName": "Digital Ventures",
+    "email": "hello@digitalventures.no",
+    "location": "Trondheim",
+    "description": "Full-stack development agency",
+    "website": "https://digitalventures.no"
+  },
+  {
+    "id": 4,
+    "companyName": "Design Studios Oslo",
+    "email": "contact@designstudios.oslo",
+    "location": "Oslo",
+    "description": "Creative design and branding agency",
+    "website": "https://designstudios.oslo"
+  },
+  {
+    "id": 5,
+    "companyName": "CloudTech Solutions",
+    "email": "info@cloudtech.no",
+    "location": "Bergen",
+    "description": "Cloud infrastructure and DevOps specialists",
+    "website": "https://cloudtech.no"
+  }
+]
+
+

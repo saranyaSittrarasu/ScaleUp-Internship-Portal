@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "candidateId": 1,
+    "projectId": 1,
+    "company": "TechNord AS",
+    "role": "Frontend Developer Intern",
+    "duration": 12,
+    "startDate": "2024-01-15",
+    "endDate": "2024-04-15",
+    "skillsApplied": ["JavaScript", "React", "TypeScript", "UI/UX Design"],
+    "feedback": "Sarah demonstrated exceptional problem-solving skills and quickly adapted to our codebase. Her attention to detail and willingness to learn made her a valuable team member. She contributed significantly to our new dashboard feature.",
+    "rating": 5,
+    "status": "completed"
+  }
+]
+
+

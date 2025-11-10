@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Developer Internship",
+    "company": "TechNord AS",
+    "description": "Join our dynamic team to build modern web applications using React and TypeScript. Work on real-world projects that impact thousands of users.",
+    "requiredSkills": ["JavaScript", "React", "TypeScript", "UI/UX Design"],
+    "duration": 12,
+    "location": "Oslo",
+    "remote": true,
+    "employerId": 1,
+    "assignedTo": 1,
+    "status": "active"
+  },
+  {
+    "id": 2,
+    "title": "Data Science Intern",
+    "company": "Analytics Norway",
+    "description": "Work with our data team to analyze customer behavior and build predictive models. You'll learn advanced machine learning techniques.",
+    "requiredSkills": ["Python", "Machine Learning", "SQL", "Data Analysis"],
+    "duration": 16,
+    "location": "Bergen",
+    "remote": false,
+    "employerId": 2,
+    "assignedTo": null,
+    "status": "active"
+  },
+  {
+    "id": 3,
+    "title": "Full Stack Developer",
+    "company": "Digital Ventures",
+    "description": "Build end-to-end solutions for our clients. Gain experience in both frontend and backend development.",
+    "requiredSkills": ["React", "Node.js", "Python", "SQL", "Agile"],
+    "duration": 14,
+    "location": "Trondheim",
+    "remote": true,
+    "employerId": 3,
+    "assignedTo": null,
+    "status": "active"
+  },
+  {
+    "id": 4,
+    "title": "UX/UI Designer Intern",
+    "company": "Design Studios Oslo",
+    "description": "Create beautiful and intuitive user interfaces. Work with our design team to improve user experiences.",
+    "requiredSkills": ["UI/UX Design", "React", "Figma", "User Research"],
+    "duration": 10,
+    "location": "Oslo",
+    "remote": false,
+    "employerId": 4,
+    "assignedTo": null,
+    "status": "active"
+  },
+  {
+    "id": 5,
+    "title": "DevOps Engineer Intern",
+    "company": "CloudTech Solutions",
+    "description": "Learn infrastructure as code and cloud deployment strategies. Work with modern DevOps tools.",
+    "requiredSkills": ["Python", "JavaScript", "CI/CD", "Docker", "Kubernetes"],
+    "duration": 12,
+    "location": "Bergen",
+    "remote": true,
+    "employerId": 5,
+    "assignedTo": null,
+    "status": "active"
+  }
+]
+

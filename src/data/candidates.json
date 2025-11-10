@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "name": "Sarah Ahmed",
+    "email": "sarah.ahmed@example.com",
+    "location": "Oslo",
+    "skills": ["JavaScript", "React", "Node.js", "Python", "Data Analysis"],
+    "norwegian": "A2",
+    "english": "C1",
+    "currentInternship": 1,
+    "bio": "Passionate developer with a focus on web development and data analysis. Eager to work in a collaborative environment.",
+    "profileImage": "👩‍💻"
+  },
+  {
+    "id": 2,
+    "name": "Fatima Ali",
+    "email": "fatima.ali@example.com",
+    "location": "Bergen",
+    "skills": ["Python", "Machine Learning", "SQL", "JavaScript"],
+    "norwegian": "B1",
+    "english": "C1",
+    "currentInternship": null,
+    "bio": "Aspiring data scientist with strong analytical skills and a passion for solving complex problems.",
+    "profileImage": "👩‍🔬"
+  },
+  {
+    "id": 3,
+    "name": "Aisha Hassan",
+    "email": "aisha.hassan@example.com",
+    "location": "Trondheim",
+    "skills": ["React", "TypeScript", "UI/UX Design", "GraphQL", "Agile"],
+    "norwegian": "A1",
+    "english": "C2",
+    "currentInternship": null,
+    "bio": "Creative frontend developer with a keen eye for design and user experience.",
+    "profileImage": "🎨"
+  }
+]
+
