@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../components/Layout/Navbar";
 import Footer from "../components/Layout/Footer";
 
 export default function PostProject() {
   const navigate = useNavigate();
+  const location = useLocation();
   const storedEmployer = localStorage.getItem("employer");
   const employer = storedEmployer ? JSON.parse(storedEmployer) : null;
+  const existingCustomProjects = location.state?.customProjects || [];
 
   const [formData, setFormData] = useState({
     title: "",
@@ -87,14 +89,12 @@ export default function PostProject() {
       created_at: new Date().toISOString(),
     };
 
-    const storedProjects = JSON.parse(localStorage.getItem("employerProjects") || "{}");
-    const employerProjects = storedProjects[employer.id] || [];
-
-    storedProjects[employer.id] = [...employerProjects, newInternship];
-    localStorage.setItem("employerProjects", JSON.stringify(storedProjects));
-
     alert("Internship posted successfully!");
-    navigate("/employer/dashboard");
+    navigate("/employer/dashboard", {
+      state: {
+        customProjects: [...existingCustomProjects, newInternship],
+      },
+    });
   };
 
   const handleAddSkill = () => {
@@ -122,7 +122,11 @@ export default function PostProject() {
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-3xl font-bold text-gray-800">Post New Internship</h1>
           <button
-            onClick={() => navigate("/employer/dashboard")}
+            onClick={() =>
+              navigate("/employer/dashboard", {
+                state: { customProjects: existingCustomProjects },
+              })
+            }
             className="text-gray-600 hover:text-gray-800"
           >
             ← Back to Dashboard
@@ -441,7 +445,11 @@ export default function PostProject() {
             </button>
             <button
               type="button"
-              onClick={() => navigate("/employer/dashboard")}
+              onClick={() =>
+                navigate("/employer/dashboard", {
+                  state: { customProjects: existingCustomProjects },
+                })
+              }
               className="flex-1 px-6 py-3 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors font-medium"
             >
               Cancel

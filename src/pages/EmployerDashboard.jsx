@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Navbar from "../components/Layout/Navbar";
 import Footer from "../components/Layout/Footer";
 import employersData from "../data/employers.json";
@@ -197,6 +197,7 @@ const CandidateModal = ({ candidate, onClose }) => {
 
 export default function EmployerDashboard() {
   const navigate = useNavigate();
+  const location = useLocation();
   const storedemployer = localStorage.getItem("employer");
   const currentEmployer = storedemployer ? JSON.parse(storedemployer) : null;
 
@@ -212,7 +213,10 @@ export default function EmployerDashboard() {
     );
   }, [currentEmployer]);
 
-  const [customProjects, setCustomProjects] = useState([]);
+  const locationState = location.state || {};
+  const [customProjects, setCustomProjects] = useState(
+    () => locationState.customProjects || []
+  );
   const [deletedProjectKeys, setDeletedProjectKeys] = useState([]);
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -229,41 +233,17 @@ export default function EmployerDashboard() {
   );
 
   useEffect(() => {
-    if (!employerProfile?.id) return;
-    const stored = JSON.parse(localStorage.getItem("employerProjects") || "{}");
-    setCustomProjects(stored[employerProfile.id] || []);
-  }, [employerProfile?.id]);
-
-  useEffect(() => {
-    if (!employerProfile?.id) return;
-    const stored = JSON.parse(
-      localStorage.getItem("employerDeletedProjects") || "{}"
-    );
-    setDeletedProjectKeys(stored[employerProfile.id] || []);
-  }, [employerProfile?.id]);
-
-  useEffect(() => {
-    if (!employerProfile?.id) return;
-    const stored = JSON.parse(localStorage.getItem("employerProjects") || "{}");
-    stored[employerProfile.id] = customProjects;
-    localStorage.setItem("employerProjects", JSON.stringify(stored));
-  }, [customProjects, employerProfile?.id]);
-
-  useEffect(() => {
-    if (!employerProfile?.id) return;
-    const stored = JSON.parse(
-      localStorage.getItem("employerDeletedProjects") || "{}"
-    );
-    stored[employerProfile.id] = deletedProjectKeys;
-    localStorage.setItem("employerDeletedProjects", JSON.stringify(stored));
-  }, [deletedProjectKeys, employerProfile?.id]);
+    if (Array.isArray(locationState.customProjects)) {
+      setCustomProjects(locationState.customProjects);
+    }
+  }, [locationState.customProjects]);
 
   const baseProjects = useMemo(() => {
     const all = employerProfile?.Project || [];
     return all.filter(
       (project) => !deletedProjectKeys.includes(getProjectKey(project))
     );
-  }, [employerProfile?.Project, deletedProjectKeys]);
+  }, [deletedProjectKeys, employerProfile?.Project]);
 
   const projects = useMemo(
     () => [...baseProjects, ...customProjects],
@@ -365,7 +345,11 @@ export default function EmployerDashboard() {
                 )}
               </div>
               <button
-                onClick={() => navigate("/employer/projects/new")}
+                onClick={() =>
+                  navigate("/employer/projects/new", {
+                    state: { customProjects },
+                  })
+                }
                 className="inline-flex items-center justify-center rounded-2xl bg-primary-600 px-6 py-4 text-base font-semibold text-white shadow-lg shadow-primary-600/30 transition hover:-translate-y-0.5 hover:bg-primary-700"
               >
                 + Post new internship
