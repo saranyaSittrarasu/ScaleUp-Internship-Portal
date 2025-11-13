@@ -1,0 +1,60 @@
+{
+    "courses": [
+        {
+            "title": "Professional Communication",
+            "description": "Master workplace communication, email etiquette, and presentation skills.",
+            "duration": "3 weeks",
+            "lessons": 12,
+            "progress": "40%",
+            "status": "In Progress",
+            "tags": [
+                "Email Writing",
+                "Presentations",
+                "Active Listening"
+            ],
+            "action": "Start Course"
+        },
+        {
+            "title": "Time Management & Organization",
+            "description": "Learn to prioritize tasks, manage deadlines, and increase productivity.",
+            "duration": "2 weeks",
+            "lessons": 8,
+            "progress": "0%",
+            "status": "Completed",
+            "tags": [
+                "Task Prioritization",
+                "Planning",
+                "Productivity"
+            ],
+            "action": "Start Course"
+        },
+        {
+            "title": "Teamwork & Collaboration",
+            "description": "Develop skills for effective teamwork and cross-cultural collaboration.",
+            "duration": "2 weeks",
+            "lessons": 10,
+            "progress": "0%",
+            "status": "Not Started",
+            "tags": [
+                "Team Dynamics",
+                "Collaboration",
+                "Conflict Resolution"
+            ],
+            "action": "Start Course"
+        },
+        {
+            "title": "Professional Workplace Culture",
+            "description": "Understand Norwegian workplace culture, norms, and expectations.",
+            "duration": "2 weeks",
+            "lessons": 9,
+            "progress": "0%",
+            "status": "Not Started",
+            "tags": [
+                "Cultural Awareness",
+                "Workplace Etiquette",
+                "Networking"
+            ],
+            "action": "Start Course"
+        }
+    ]
+}

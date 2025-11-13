@@ -1,39 +1,550 @@
 [
   {
     "id": 1,
-    "name": "Sarah Ahmed",
-    "email": "sarah.ahmed@example.com",
+    "name": "Saranya Sittrarasu",
+    "email": "saranya.sittra@example.com",
+    "password": "password123",
     "location": "Oslo",
-    "skills": ["JavaScript", "React", "Node.js", "Python", "Data Analysis"],
+    "Role": "WebApplication Developer",
+    "LinkedIn": "https://www.linkedin.com/in/saranya-sittrarasu/",
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Python",
+      "TypeScript"
+    ],
     "norwegian": "A2",
     "english": "C1",
     "currentInternship": 1,
     "bio": "Passionate developer with a focus on web development and data analysis. Eager to work in a collaborative environment.",
-    "profileImage": "👩‍💻"
+    "profileImage": "../src/images/Saranya-Bilde.jpg",
+    "firstTimeLogin": false,
+    "Internship": [
+      {
+        "position_overview": {
+          "title": "Front End Development Internship",
+          "summary": "Develop responsive web applications using modern front-end technologies while collaborating with designers and back-end developers."
+        },
+        "company": "TechNord AS",
+        "duration": {
+          "start_date": "1 Apr",
+          "end_date": "30 Jun",
+          "total_duration": "12 weeks"
+        },
+        "time_commitment": "20 hours per week",
+        "key_responsibilities": [
+          "Build and maintain responsive web interfaces",
+          "Collaborate with UI/UX designers and back-end teams",
+          "Ensure code quality and performance optimization"
+        ],
+        "requirements": [
+          "Knowledge of HTML, CSS, and JavaScript",
+          "Familiarity with frameworks like React or Vue.js",
+          "Ability to debug and test code effectively"
+        ],
+        "benefits": {
+          "what_you_will_gain": [
+            "Hands-on Front-End Experience",
+            "Mentorship from Engineers",
+            "Portfolio-Ready Projects"
+          ]
+        },
+        "mentor": {
+          "name": "Oskar Hansen",
+          "position": "Front End Engineer",
+          "experience": "5+ years"
+        },
+        "team": {
+          "team_size": 6,
+          "collaboration": "You'll collaborate closely with design and engineering teams"
+        },
+        "skills": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React"
+        ],
+        "location": "Remote",
+        "remote": true,
+        "status": "In-progress",
+        "progressPercentage": 65,
+        "contact_email": "frontend@company.com",
+        "matchScore": 80
+      },
+      {
+        "position_overview": {
+          "title": "Full Stack Development Internship",
+          "summary": "Gain experience across both front-end and back-end development by contributing to full-cycle web application projects."
+        },
+        "company": "Analytics Norway",
+        "duration": {
+          "start_date": "1 Apr",
+          "end_date": "30 Jun",
+          "total_duration": "12 weeks"
+        },
+        "time_commitment": "20 hours per week",
+        "key_responsibilities": [
+          "Develop full-stack web applications",
+          "Integrate APIs and manage databases",
+          "Collaborate with designers and QA testers"
+        ],
+        "requirements": [
+          "Knowledge of JavaScript, Node.js, and databases",
+          "Understanding of RESTful APIs",
+          "Good problem-solving and teamwork skills"
+        ],
+        "benefits": {
+          "what_you_will_gain": [
+            "Full Stack Experience",
+            "Technical Mentorship",
+            "Practical Project Exposure"
+          ]
+        },
+        "mentor": {
+          "name": "Eirik",
+          "position": "Full Stack Developer",
+          "experience": "6+ years"
+        },
+        "team": {
+          "team_size": 7,
+          "collaboration": "You'll work with both front-end and back-end developers"
+        },
+        "skills": [
+          "JavaScript",
+          "Node.js",
+          "React",
+          "Database Management"
+        ],
+        "location": "Remote",
+        "remote": true,
+        "status": "Completed",
+        "contact_email": "fullstack@company.com",
+        "matchScore": 70
+      },
+      {
+        "position_overview": {
+          "title": "Backend Developer Intern",
+          "summary": "Work on building scalable server-side applications, APIs, and database systems that power front-end solutions."
+        },
+        "company": "Digital Ventures",
+        "duration": {
+          "start_date": "1 Apr",
+          "end_date": "30 Jun",
+          "total_duration": "12 weeks"
+        },
+        "time_commitment": "20 hours per week",
+        "key_responsibilities": [
+          "Develop and maintain backend APIs and services",
+          "Work with databases and optimize data structures",
+          "Collaborate with front-end teams to integrate APIs"
+        ],
+        "requirements": [
+          "Knowledge of Node.js, Python, or Java",
+          "Understanding of databases like MySQL or MongoDB",
+          "Familiarity with REST API development"
+        ],
+        "benefits": {
+          "what_you_will_gain": [
+            "Backend Development Skills",
+            "API Design Experience",
+            "Professional Mentorship"
+          ]
+        },
+        "mentor": {
+          "name": "Henrik",
+          "position": "Backend Engineer",
+          "experience": "7+ years"
+        },
+        "team": {
+          "team_size": 5,
+          "collaboration": "You'll collaborate with full stack and front-end developers"
+        },
+        "skills": [
+          "Node.js",
+          "Python",
+          "APIs",
+          "Database Design"
+        ],
+        "location": "Bergen, Norway",
+        "remote": true,
+        "status": "Active",
+        "contact_email": "backend@company.com",
+        "matchScore": 60
+      }
+    ],
+    "SoftSkillCourses": []
   },
   {
     "id": 2,
-    "name": "Fatima Ali",
-    "email": "fatima.ali@example.com",
-    "location": "Bergen",
-    "skills": ["Python", "Machine Learning", "SQL", "JavaScript"],
+    "name": "Vinithra",
+    "email": "vinithra@example.com",
+    "password": "password123",
+    "location": "Oslo",
+    "Role": "UI/Ux Designer",
+    "LinkedIn": "https://www.linkedin.com/in/vinithra-kumar-b3301b204/",
+    "skills": [
+      "Figma",
+      "Adobe XD",
+      "User Research",
+      "Prototyping"
+    ],
     "norwegian": "B1",
     "english": "C1",
     "currentInternship": null,
     "bio": "Aspiring data scientist with strong analytical skills and a passion for solving complex problems.",
-    "profileImage": "👩‍🔬"
+    "profileImage": "../src/images/Saranya-Bilde.jpg",
+    "firstTimeLogin": false,
+    "Internship": [
+      {
+        "position_overview": {
+          "title": "UI Design Intern (User Interface)",
+          "summary": "Design intuitive and visually appealing user interfaces that enhance user experiences and align with brand identity."
+        },
+        "company": "Nordic Design Studio",
+        "duration": {
+          "start_date": "1 Apr",
+          "end_date": "30 Jun",
+          "total_duration": "12 weeks"
+        },
+        "time_commitment": "20 hours per week",
+        "key_responsibilities": [
+          "Create user interface designs for web and mobile apps",
+          "Develop style guides and design components",
+          "Collaborate with UX designers and developers",
+          "Ensure visual consistency across all digital assets"
+        ],
+        "requirements": [
+          "Proficiency in Figma or Adobe XD",
+          "Understanding of color theory and typography",
+          "Creative eye for design and detail orientation"
+        ],
+        "benefits": {
+          "what_you_will_gain": [
+            "UI Design Experience",
+            "Portfolio Projects",
+            "Mentorship from Design Experts"
+          ]
+        },
+        "mentor": {
+          "name": "Nina",
+          "position": "UI Design Lead",
+          "experience": "6+ years"
+        },
+        "team": {
+          "team_size": 4,
+          "collaboration": "You'll collaborate with the UX and development teams"
+        },
+        "skills": [
+          "Figma",
+          "Adobe XD",
+          "Design Systems",
+          "Visual Design"
+        ],
+        "location": "Trondheim, Norway",
+        "remote": true,
+        "status": "Active",
+        "contact_email": "ui.design@company.com",
+        "matchScore": 75
+      },
+      {
+        "position_overview": {
+          "title": "UX Design Intern (User Experience)",
+          "summary": "Learn how to design seamless and user-centered experiences by conducting research, testing prototypes, and improving usability."
+        },
+        "company": "Skandi UX Lab",
+        "duration": {
+          "start_date": "1 Apr",
+          "end_date": "30 Jun",
+          "total_duration": "12 weeks"
+        },
+        "time_commitment": "20 hours per week",
+        "key_responsibilities": [
+          "Conduct user research and usability testing",
+          "Create wireframes and user flows",
+          "Collaborate with UI designers and developers",
+          "Document and present UX findings"
+        ],
+        "requirements": [
+          "Basic knowledge of UX research methods",
+          "Experience with prototyping tools like Figma or Miro",
+          "Empathy and attention to user needs"
+        ],
+        "benefits": {
+          "what_you_will_gain": [
+            "UX Research Experience",
+            "Prototyping Skills",
+            "Mentorship from UX Designers"
+          ]
+        },
+        "mentor": {
+          "name": "Hanne",
+          "position": "Senior UX Designer",
+          "experience": "8+ years"
+        },
+        "team": {
+          "team_size": 5,
+          "collaboration": "You'll work closely with UX researchers and developers"
+        },
+        "skills": [
+          "User Research",
+          "Prototyping",
+          "Usability Testing",
+          "Wireframing"
+        ],
+        "location": "Remote",
+        "remote": true,
+        "status": "Active",
+        "contact_email": "ux.design@company.com",
+        "matchScore": 70
+      },
+      {
+        "position_overview": {
+          "title": "Product Design Intern",
+          "summary": "Combine UI and UX principles to design complete digital product experiences from concept to prototype."
+        },
+        "company": "Fjord Product Collective",
+        "duration": {
+          "start_date": "1 Apr",
+          "end_date": "30 Jun",
+          "total_duration": "12 weeks"
+        },
+        "time_commitment": "20 hours per week",
+        "key_responsibilities": [
+          "Design end-to-end product experiences",
+          "Collaborate with cross-functional teams on prototypes",
+          "Conduct user testing and iterate on feedback"
+        ],
+        "requirements": [
+          "Knowledge of design thinking processes",
+          "Experience with prototyping and design tools",
+          "Strong visual and interaction design skills"
+        ],
+        "benefits": {
+          "what_you_will_gain": [
+            "Full Product Design Experience",
+            "Cross-functional Collaboration",
+            "Professional Mentorship"
+          ]
+        },
+        "mentor": {
+          "name": "Kristin",
+          "position": "Product Design Lead",
+          "experience": "6+ years"
+        },
+        "team": {
+          "team_size": 6,
+          "collaboration": "You'll collaborate with UI, UX, and product teams"
+        },
+        "skills": [
+          "Design Thinking",
+          "Figma",
+          "Prototyping",
+          "User Testing"
+        ],
+        "location": "Oslo, Norway",
+        "remote": true,
+        "status": "Active",
+        "contact_email": "product.design@company.com",
+        "matchScore": 65
+      }
+    ],
+    "SoftSkillCourses": [
+      {
+        "title": "Teamwork & Collaboration",
+        "description": "Develop skills for effective teamwork and cross-cultural collaboration.",
+        "duration": "2 weeks",
+        "lessons": 10,
+        "progress": "100%",
+        "status": "Completed",
+        "tags": [
+          "Team Dynamics",
+          "Collaboration",
+          "Conflict Resolution"
+        ],
+        "action": "Start Course"
+      }
+    ]
   },
   {
     "id": 3,
-    "name": "Aisha Hassan",
-    "email": "aisha.hassan@example.com",
-    "location": "Trondheim",
-    "skills": ["React", "TypeScript", "UI/UX Design", "GraphQL", "Agile"],
-    "norwegian": "A1",
-    "english": "C2",
+    "name": "Sowmya",
+    "email": "sowmya@example.com",
+    "password": "password123",
+    "location": "Oslo",
+    "Role": "Data Analyst",
+    "LinkedIn": "https://www.linkedin.com/in/sowmya-kumar-b3301b204/",
+    "skills": [
+      "SQL",
+      "Business Intelligence",
+      "Data Visualization",
+      "Power BI",
+      "Tableau"
+    ],
+    "norwegian": "B1",
+    "english": "C1",
     "currentInternship": null,
     "bio": "Creative frontend developer with a keen eye for design and user experience.",
-    "profileImage": "🎨"
+    "profileImage": "../src/images/Saranya-Bilde.jpg",
+    "firstTimeLogin": true,
+    "Internship": [
+      {
+        "position_overview": {
+          "title": "Data & Insights Analyst Intern",
+          "summary": "Support business decision-making by analyzing data, building dashboards, and delivering actionable insights. Ideal for analytical thinkers passionate about data visualization and storytelling."
+        },
+        "company": "Analytics Norway",
+        "duration": {
+          "start_date": "1 Apr",
+          "end_date": "30 Jun",
+          "total_duration": "12 weeks"
+        },
+        "time_commitment": "20 hours per week",
+        "key_responsibilities": [
+          "Collect, clean, and analyze large data sets",
+          "Build dashboards and visualizations using Power BI or Tableau",
+          "Generate actionable insights for marketing and operations teams",
+          "Assist in preparing business performance reports"
+        ],
+        "requirements": [
+          "Strong analytical and problem-solving skills",
+          "Proficiency in Excel and data visualization tools",
+          "Basic understanding of SQL or Python for data analysis",
+          "Attention to detail and data accuracy"
+        ],
+        "benefits": {
+          "what_you_will_gain": [
+            "Data Analytics Experience",
+            "Mentorship in Business Intelligence",
+            "Professional Networking",
+            "Workplace Experience"
+          ]
+        },
+        "mentor": {
+          "name": "Anders",
+          "position": "Senior Data Analyst",
+          "experience": "6+ years"
+        },
+        "team": {
+          "team_size": 6,
+          "collaboration": "You'll collaborate with data engineers and business analysts"
+        },
+        "skills": [
+          "Excel",
+          "SQL",
+          "Power BI",
+          "Data Visualization",
+          "Analytical Thinking"
+        ],
+        "location": "Oslo, Norway",
+        "remote": true,
+        "status": "Active",
+        "contact_email": "data.insights@company.com",
+        "matchScore": 80
+      },
+      {
+        "position_overview": {
+          "title": "Product/Operations Analyst Intern",
+          "summary": "Work closely with product and operations teams to analyze performance, track KPIs, and improve process efficiency."
+        },
+        "company": "Nordic Products AS",
+        "duration": {
+          "start_date": "1 Apr",
+          "end_date": "30 Jun",
+          "total_duration": "12 weeks"
+        },
+        "time_commitment": "20 hours per week",
+        "key_responsibilities": [
+          "Analyze product performance metrics and operational KPIs",
+          "Support sprint planning and backlog refinement",
+          "Assist in creating reports for product decision-making",
+          "Collaborate with cross-functional teams to identify improvements"
+        ],
+        "requirements": [
+          "Basic understanding of business operations and product lifecycle",
+          "Experience with Excel or data tracking tools",
+          "Strong communication and organizational skills"
+        ],
+        "benefits": {
+          "what_you_will_gain": [
+            "Operational Analytics Experience",
+            "Product Management Exposure",
+            "Mentorship from Product Leaders"
+          ]
+        },
+        "mentor": {
+          "name": "Lina",
+          "position": "Product Operations Manager",
+          "experience": "7+ years"
+        },
+        "team": {
+          "team_size": 8,
+          "collaboration": "You'll work with product managers and analysts"
+        },
+        "skills": [
+          "Excel",
+          "Data Reporting",
+          "Agile",
+          "Operations Analysis"
+        ],
+        "location": "Bergen, Norway",
+        "remote": false,
+        "status": "Active",
+        "contact_email": "product.ops@company.com",
+        "matchScore": 70
+      },
+      {
+        "position_overview": {
+          "title": "Market Research Analyst Intern",
+          "summary": "Conduct market and competitor research to identify trends, opportunities, and customer insights that inform strategic business decisions."
+        },
+        "company": "Insight Collective",
+        "duration": {
+          "start_date": "1 Apr",
+          "end_date": "30 Jun",
+          "total_duration": "12 weeks"
+        },
+        "time_commitment": "20 hours per week",
+        "key_responsibilities": [
+          "Gather and analyze market and competitor data",
+          "Design and execute surveys and interviews",
+          "Prepare reports summarizing research findings",
+          "Support marketing and strategy teams with data-driven insights"
+        ],
+        "requirements": [
+          "Strong research and analytical skills",
+          "Ability to interpret quantitative and qualitative data",
+          "Good written communication and reporting skills"
+        ],
+        "benefits": {
+          "what_you_will_gain": [
+            "Market Research Skills",
+            "Data Interpretation Experience",
+            "Mentorship from Marketing Analysts"
+          ]
+        },
+        "mentor": {
+          "name": "Eva",
+          "position": "Market Insights Lead",
+          "experience": "5+ years"
+        },
+        "team": {
+          "team_size": 5,
+          "collaboration": "You'll collaborate with research and marketing teams"
+        },
+        "skills": [
+          "Market Analysis",
+          "Data Collection",
+          "Report Writing",
+          "Competitor Analysis"
+        ],
+        "location": "Remote",
+        "remote": true,
+        "status": "Active",
+        "contact_email": "research@company.com",
+        "matchScore": 65
+      }
+    ],
+    "SoftSkillCourses": []
   }
 ]
-

@@ -1,15 +1,43 @@
-import React from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { useApp } from '../../context/AppContext';
+import React from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useApp } from "../../context/AppContext";
 
 export default function Navbar() {
   const navigate = useNavigate();
   const location = useLocation();
   const { state, dispatch } = useApp();
 
+  const parseStoredJSON = (key) => {
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw || raw === "undefined") {
+        return null;
+      }
+      return JSON.parse(raw);
+    } catch (error) {
+      console.warn(`Failed to parse ${key} from localStorage`, error);
+      // remove corrupted entry so we don't keep failing
+      localStorage.removeItem(key);
+      return null;
+    }
+  };
+
+  const storedCandidate = parseStoredJSON("candidate");
+  const storedEmployer = parseStoredJSON("employer");
+
+  const derivedUser =
+    state.currentUser || storedCandidate || storedEmployer || null;
+
+  const derivedRole =
+    state.userRole ||
+    (storedCandidate ? "candidate" : storedEmployer ? "employer" : null);
+
   const handleLogout = () => {
-    dispatch({ type: 'LOGOUT' });
-    navigate('/');
+    dispatch({ type: "LOGOUT" });
+    localStorage.removeItem("candidate");
+    localStorage.removeItem("employer");
+    localStorage.removeItem("internshipHubData");
+    navigate("/");
   };
 
   const isActive = (path) => location.pathname === path;
@@ -24,80 +52,13 @@ export default function Navbar() {
             </span>
           </Link>
 
-          {state.userRole && (
+          {derivedRole && (
             <div className="flex items-center gap-6">
-              {state.userRole === 'candidate' ? (
-                <>
-                  <Link
-                    to="/candidate/dashboard"
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive('/candidate/dashboard')
-                        ? 'bg-primary-600 text-white'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`}
-                  >
-                    Dashboard
-                  </Link>
-                  <Link
-                    to="/candidate/profile"
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive('/candidate/profile')
-                        ? 'bg-primary-600 text-white'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`}
-                  >
-                    Profile
-                  </Link>
-                  <Link
-                    to="/candidate/matching"
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive('/candidate/matching')
-                        ? 'bg-primary-600 text-white'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`}
-                  >
-                    Find Internships
-                  </Link>
-                  <Link
-                    to="/candidate/experience"
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive('/candidate/experience')
-                        ? 'bg-primary-600 text-white'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`}
-                  >
-                    Experience Card
-                  </Link>
-                </>
-              ) : (
-                <>
-                  <Link
-                    to="/employer/dashboard"
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive('/employer/dashboard')
-                        ? 'bg-primary-600 text-white'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`}
-                  >
-                    Dashboard
-                  </Link>
-                  <Link
-                    to="/employer/projects"
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                      isActive('/employer/projects')
-                        ? 'bg-primary-600 text-white'
-                        : 'text-gray-700 hover:bg-gray-100'
-                    }`}
-                  >
-                    My Projects
-                  </Link>
-                </>
-              )}
-              {state.currentUser && (
+              {derivedUser && (
                 <div className="flex items-center gap-3">
-                  <span className="text-sm text-gray-600">
-                    {state.currentUser.name}
-                  </span>
+                  {/* <span className="text-lg text-black font-semibold text-primary-600">
+                    <h1>{derivedUser.name || derivedUser.companyName}</h1>
+                  </span> */}
                   <button
                     onClick={handleLogout}
                     className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors text-sm font-medium"
@@ -113,5 +74,3 @@ export default function Navbar() {
     </nav>
   );
 }
-
-
